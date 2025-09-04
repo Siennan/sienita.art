@@ -1,0 +1,346 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Spartan Mascot Container */
+.spartan {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    transform: scale(1.2);
+}
+
+/* Helmet */
+.helmet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 180px;
+    z-index: 10;
+}
+
+.helmet-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(145deg, #c0c0c0, #a0a0a0);
+    border-radius: 50% 50% 40% 40%;
+    border: 3px solid #888;
+    box-shadow: 
+        inset 0 5px 10px rgba(255,255,255,0.3),
+        inset 0 -5px 10px rgba(0,0,0,0.3),
+        0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Helmet Crest */
+.crest {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 60px;
+}
+
+.crest-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, #8B4513, #A0522D);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.crest-plume {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 50px;
+    background: linear-gradient(180deg, #FF0000, #CC0000);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.crest-plume::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(180deg, #FF0000, #CC0000);
+    border-radius: 20px;
+    transform: rotate(-10deg);
+}
+
+.crest-plume::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(180deg, #FF0000, #CC0000);
+    border-radius: 20px;
+    transform: rotate(10deg);
+}
+
+/* Visor */
+.visor {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 160px;
+    height: 40px;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    border-radius: 0 0 80px 80px;
+    border: 2px solid #000;
+    box-shadow: 
+        inset 0 2px 5px rgba(255,255,255,0.1),
+        0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Face */
+.face {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(145deg, #FDBCB4, #F4A460);
+    border-radius: 50% 50% 40% 40%;
+    border: 2px solid #D2691E;
+    z-index: 5;
+}
+
+/* Eyes */
+.eye {
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    box-shadow: inset 0 2px 5px rgba(255,255,255,0.2);
+}
+
+.left-eye {
+    left: 25px;
+}
+
+.right-eye {
+    right: 25px;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Nose */
+.nose {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 15px;
+    background: linear-gradient(145deg, #DEB887, #CD853F);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Mouth */
+.mouth {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    background: #8B0000;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid #654321;
+}
+
+/* Armor */
+.armor {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 120px;
+    z-index: 3;
+}
+
+.chest-plate {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(145deg, #c0c0c0, #a0a0a0);
+    border-radius: 20px;
+    border: 3px solid #888;
+    box-shadow: 
+        inset 0 3px 8px rgba(255,255,255,0.3),
+        inset 0 -3px 8px rgba(0,0,0,0.3),
+        0 5px 15px rgba(0,0,0,0.4);
+}
+
+.armor-detail {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    background: linear-gradient(145deg, #b0b0b0, #909090);
+    border-radius: 15px;
+    border: 2px solid #777;
+}
+
+/* Shoulder Guards */
+.shoulder-guard {
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 50px;
+    background: linear-gradient(145deg, #c0c0c0, #a0a0a0);
+    border-radius: 30px;
+    border: 3px solid #888;
+    box-shadow: 
+        inset 0 2px 5px rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(0,0,0,0.3),
+        0 3px 10px rgba(0,0,0,0.4);
+}
+
+.left-shoulder {
+    left: -30px;
+    transform: rotate(-15deg);
+}
+
+.right-shoulder {
+    right: -30px;
+    transform: rotate(15deg);
+}
+
+/* Arms */
+.arm {
+    position: absolute;
+    top: 220px;
+    width: 30px;
+    height: 80px;
+    background: linear-gradient(145deg, #FDBCB4, #F4A460);
+    border-radius: 15px;
+    border: 2px solid #D2691E;
+    z-index: 2;
+}
+
+.left-arm {
+    left: 50px;
+    transform: rotate(-20deg);
+}
+
+.right-arm {
+    right: 50px;
+    transform: rotate(20deg);
+}
+
+/* Legs */
+.leg {
+    position: absolute;
+    top: 350px;
+    width: 40px;
+    height: 100px;
+    background: linear-gradient(145deg, #FDBCB4, #F4A460);
+    border-radius: 20px;
+    border: 2px solid #D2691E;
+    z-index: 1;
+}
+
+.left-leg {
+    left: 80px;
+}
+
+.right-leg {
+    right: 80px;
+}
+
+/* Animation */
+.spartan {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: scale(1.2) translateY(0px);
+    }
+    50% {
+        transform: scale(1.2) translateY(-10px);
+    }
+}
+
+/* Hover Effects */
+.helmet:hover .crest-plume {
+    animation: wave 0.5s ease-in-out;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    25% { transform: translateX(-50%) rotate(-5deg); }
+    75% { transform: translateX(-50%) rotate(5deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .spartan {
+        transform: scale(1);
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}
