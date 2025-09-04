@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJSU Spartan Combat Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="combat.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="battle.html" class="nav-link">Battle Arena</a>
+            <a href="combat.html" class="nav-link active">Combat Arena</a>
+        </nav>
+        
+        <h1>SJSU Spartan Combat Arena</h1>
+        <p class="controls">WASD to move • Space to attack • Shift to block • R to rage mode!</p>
+        
+        <!-- Combat Arena -->
+        <div class="arena">
+            <!-- Spartan Warrior -->
+            <div class="spartan warrior" id="spartan">
+                <!-- Helmet -->
+                <div class="helmet">
+                    <!-- Helmet Crest -->
+                    <div class="crest">
+                        <div class="crest-plume"></div>
+                        <div class="crest-base"></div>
+                    </div>
+                    <!-- Helmet Visor -->
+                    <div class="visor"></div>
+                    <!-- Helmet Body -->
+                    <div class="helmet-body"></div>
+                </div>
+                
+                <!-- Face -->
+                <div class="face">
+                    <!-- Eyes -->
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                    <!-- Nose -->
+                    <div class="nose"></div>
+                    <!-- Mouth -->
+                    <div class="mouth"></div>
+                </div>
+                
+                <!-- Body/Armor -->
+                <div class="armor">
+                    <!-- Chest Plate -->
+                    <div class="chest-plate">
+                        <div class="armor-detail"></div>
+                    </div>
+                    <!-- Shoulder Guards -->
+                    <div class="shoulder-guard left-shoulder"></div>
+                    <div class="shoulder-guard right-shoulder"></div>
+                </div>
+                
+                <!-- Arms -->
+                <div class="arm left-arm"></div>
+                <div class="arm right-arm"></div>
+                
+                <!-- Legs -->
+                <div class="leg left-leg"></div>
+                <div class="leg right-leg"></div>
+                
+                <!-- Sword -->
+                <div class="sword" id="sword">
+                    <div class="blade"></div>
+                    <div class="hilt"></div>
+                    <div class="guard"></div>
+                </div>
+                
+                <!-- Shield -->
+                <div class="shield" id="shield">
+                    <div class="shield-body"></div>
+                    <div class="shield-boss"></div>
+                </div>
+            </div>
+            
+            <!-- Enemy Warrior -->
+            <div class="enemy-warrior" id="enemy">
+                <div class="enemy-helmet">
+                    <div class="enemy-crest"></div>
+                    <div class="enemy-visor"></div>
+                </div>
+                <div class="enemy-body"></div>
+                <div class="enemy-arms"></div>
+                <div class="enemy-weapon"></div>
+            </div>
+            
+            <!-- Combat Effects -->
+            <div class="combat-effects" id="effects"></div>
+            
+            <!-- Health Bars -->
+            <div class="health-bars">
+                <div class="spartan-health">
+                    <div class="health-label">Spartan</div>
+                    <div class="health-bar">
+                        <div class="health-fill" id="spartan-health-fill"></div>
+                    </div>
+                    <div class="health-text" id="spartan-health-text">100</div>
+                </div>
+                <div class="enemy-health">
+                    <div class="health-label">Enemy</div>
+                    <div class="health-bar">
+                        <div class="health-fill" id="enemy-health-fill"></div>
+                    </div>
+                    <div class="health-text" id="enemy-health-text">100</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Combat Stats -->
+        <div class="combat-stats">
+            <div class="stat">
+                <span class="stat-label">Kills:</span>
+                <span class="stat-value" id="kills">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Combo:</span>
+                <span class="stat-value" id="combo">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Rage:</span>
+                <span class="stat-value" id="rage">0%</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="combat.js"></script>
+</body>
+</html>

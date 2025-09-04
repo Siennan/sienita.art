@@ -8,10 +8,17 @@
 </head>
 <body>
     <div class="container">
+        <nav class="navigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="battle.html" class="nav-link">Battle Arena</a>
+            <a href="combat.html" class="nav-link">Combat Arena</a>
+        </nav>
+        
         <h1>SJSU Spartan Mascot</h1>
+        <p class="controls">Use WASD or Arrow Keys to move the Spartan!</p>
         
         <!-- Spartan Mascot -->
-        <div class="spartan">
+        <div class="spartan" id="spartan">
             <!-- Helmet -->
             <div class="helmet">
                 <!-- Helmet Crest -->
@@ -54,7 +61,15 @@
             <!-- Legs -->
             <div class="leg left-leg"></div>
             <div class="leg right-leg"></div>
+            
+            <!-- Red Cape -->
+            <div class="cape">
+                <div class="cape-body"></div>
+                <div class="cape-folds"></div>
+            </div>
         </div>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

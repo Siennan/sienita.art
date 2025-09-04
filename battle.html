@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJSU Spartan Battle Arena</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="battle.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="battle.html" class="nav-link active">Battle Arena</a>
+            <a href="combat.html" class="nav-link">Combat Arena</a>
+        </nav>
+        
+        <h1>SJSU Spartan Battle Arena</h1>
+        <p class="controls">Use WASD or Arrow Keys to move! Space to attack!</p>
+        
+        <!-- Battle Arena -->
+        <div class="arena">
+            <!-- Spartan Warrior -->
+            <div class="spartan warrior" id="spartan">
+                <!-- Helmet -->
+                <div class="helmet">
+                    <!-- Helmet Crest -->
+                    <div class="crest">
+                        <div class="crest-plume"></div>
+                        <div class="crest-base"></div>
+                    </div>
+                    <!-- Helmet Visor -->
+                    <div class="visor"></div>
+                    <!-- Helmet Body -->
+                    <div class="helmet-body"></div>
+                </div>
+                
+                <!-- Face -->
+                <div class="face">
+                    <!-- Eyes -->
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                    <!-- Nose -->
+                    <div class="nose"></div>
+                    <!-- Mouth -->
+                    <div class="mouth"></div>
+                </div>
+                
+                <!-- Body/Armor -->
+                <div class="armor">
+                    <!-- Chest Plate -->
+                    <div class="chest-plate">
+                        <div class="armor-detail"></div>
+                    </div>
+                    <!-- Shoulder Guards -->
+                    <div class="shoulder-guard left-shoulder"></div>
+                    <div class="shoulder-guard right-shoulder"></div>
+                </div>
+                
+                <!-- Arms -->
+                <div class="arm left-arm"></div>
+                <div class="arm right-arm"></div>
+                
+                <!-- Legs -->
+                <div class="leg left-leg"></div>
+                <div class="leg right-leg"></div>
+                
+                <!-- Sword -->
+                <div class="sword" id="sword">
+                    <div class="blade"></div>
+                    <div class="hilt"></div>
+                    <div class="guard"></div>
+                </div>
+            </div>
+            
+            <!-- Enemy Target -->
+            <div class="enemy-target" id="enemy">
+                <div class="enemy-body"></div>
+                <div class="enemy-head"></div>
+                <div class="enemy-arms"></div>
+            </div>
+            
+            <!-- Battle Effects -->
+            <div class="battle-effects" id="effects"></div>
+        </div>
+        
+        <!-- Score Display -->
+        <div class="score-display">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="health">Health: <span id="health">100</span></div>
+        </div>
+    </div>
+    
+    <script src="battle.js"></script>
+</body>
+</html>
